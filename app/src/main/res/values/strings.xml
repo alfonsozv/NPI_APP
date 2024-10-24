@@ -4,5 +4,19 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_chatbot">ChatBot</string>
     <string name="title_parlante">parlante</string>
+    <string name="deiit">DEIIT</string>
+    <string name="map">Mapa</string>
+    <string name="ugr">UGR</string>
+    <string name="etsiit">ETSIIT</string>
+    <string name="syllabus">Guías docentes</string>
+    <string name="schedules">Horarios</string>
+    <string name="clubs">Clubes</string>
+    <string name="services">Servicios</string>
+    <string name="community">Comunidad</string>
+    <string name="contact">Contacto</string>
+    <string name="tui">TUI</string>
+    <string name="mails">Correos</string>
+    <string name="bus">Bono bus</string>
+    <string name="contests_and_prizes">Concursos y premios</string>
 
 </resources>

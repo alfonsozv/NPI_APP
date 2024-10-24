@@ -6,88 +6,180 @@
     android:layout_height="match_parent"
     tools:context=".ui.dashboard.DashboardFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:padding="12dp"
+        android:columnCount="2"
         tools:ignore="MissingConstraints">
 
+        <!-- Card 1: DEIIT -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/Deiit"
-            android:layout_width="0dp"
-            android:layout_height="160dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/Mapa"
-            app:cardCornerRadius="16dp"
-            android:layout_marginEnd="16dp"
-            android:backgroundTint="@color/teal_700">
-
+            android:id="@+id/DEIIT"
+            style="@style/DashboardCardView"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            >
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/white"
-                    android:textSize="32dp"
-                    android:gravity="center"
-                    android:text="DEIIT"/>
+                    style="@style/DashboardTextView"
+                    android:text="@string/deiit"/>
         </androidx.cardview.widget.CardView>
 
+        <!-- Card 2: Map -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/Mapa"
-            android:layout_width="0dp"
-            android:layout_height="160dp"
-            app:cardCornerRadius="16dp"
-            android:backgroundTint="@color/red"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/Deiit">
+            android:id="@+id/Map"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            style="@style/DashboardCardView">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textColor="@color/white"
-                android:textSize="32dp"
-                android:gravity="center"
-                android:text="Mapa" />
+                style="@style/DashboardTextView"
+                android:text="@string/map" />
         </androidx.cardview.widget.CardView>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/dashboard_recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="vertical"
-            android:clipToPadding="false"
-            android:padding="16dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+        <!-- Card 3: UGR -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/UGR"
+            style="@style/DashboardCardView"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            >
+            <TextView
+                style="@style/DashboardTextView"
+                android:text="@string/ugr" />
+        </androidx.cardview.widget.CardView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintTop_toBottomOf="@+id/Deiit"
-            android:orientation="vertical">
+        <!-- Card 4: ETSIIT -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ETSIIT"
+            style="@style/DashboardCardView"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            >
+            <TextView
+                style="@style/DashboardTextView"
+                android:text="@string/etsiit" />
+        </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/UGR"
-                android:layout_width="0dp"
-                android:layout_height="160dp"
-                app:cardCornerRadius="16dp"
-                android:backgroundTint="@color/red"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/Deiit">
+        <!-- Card 5: Syllabus -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Syllabus"
+            style="@style/DashboardCardView"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            >
+            <TextView
+                style="@style/DashboardTextView"
+                android:text="@string/syllabus" />
+        </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/white"
-                    android:textSize="32dp"
-                    android:gravity="center"
-                    android:text="Mapa" />
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Card 6: Schedules -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Schedules"
+            style="@style/DashboardCardView"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            >
+            <TextView
+                style="@style/DashboardTextView"
+                android:text="@string/schedules" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 7: Clubs -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Clubs"
+            style="@style/DashboardCardView"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            >
+            <TextView
+                style="@style/DashboardTextView"
+                android:text="@string/clubs" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 8: Services -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Services"
+            style="@style/DashboardCardView"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            >
+            <TextView
+                style="@style/DashboardTextView"
+                android:text="@string/services" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 9: Community -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Community"
+            style="@style/DashboardCardView"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            >
+            <TextView
+                style="@style/DashboardTextView"
+                android:text="@string/community" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 10: Contact -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Contact"
+            style="@style/DashboardCardView"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            >
+            <TextView
+                style="@style/DashboardTextView"
+                android:text="@string/contact" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 11: University smart card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/TUI"
+            style="@style/DashboardCardView"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            >
+            <TextView
+                style="@style/DashboardTextView"
+                android:text="@string/tui" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 12: Mails -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Mails"
+            style="@style/DashboardCardView"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            >
+            <TextView
+                style="@style/DashboardTextView"
+                android:text="@string/mails" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 13: Bus pass -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Bus"
+            style="@style/DashboardCardView"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            >
+            <TextView
+                style="@style/DashboardTextView"
+                android:text="@string/bus" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 14: Contests and prizes -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Contests_and_prizes"
+            style="@style/DashboardCardView"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            >
+            <TextView
+                style="@style/DashboardTextView"
+                android:text="@string/contests_and_prizes" />
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
